@@ -1,0 +1,23 @@
+.gallery {
+    background: #212121;
+    &_card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 80px;
+        img {
+            width: 350px;
+            height: 300px;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+    }
+    &_title {
+        padding-top: 80px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 50px;
+        line-height: 60px;
+        color: #FFFFFF;
+    }
+}

@@ -1,0 +1,26 @@
+.button {
+    padding: 16px 52px;
+    border: 2px solid #ffffff;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 140.3%;
+    color: white;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 80px;
+
+    img {
+        width: 18px;
+        height: 14px;
+        margin-left: 23px;
+        margin-top: 5px;
+    }
+}
+.red {
+    color: #A83132;
+    border: 2px solid #A83132;
+}

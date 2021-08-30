@@ -1,0 +1,41 @@
+.books {
+    background: #F9F9F9;
+    &_title {
+        font-weight: bold;
+        font-size: 50px;
+        line-height: 60px;
+        color: #000000;
+        text-align: center;
+        margin-top: 80px;
+        padding-top: 30px;
+    }
+    &_card {
+        margin-top: 80px;
+        img {
+            width: 350px;
+            height: 480px;
+        }
+        span {
+            display: block;
+        }
+    }
+    &_slider {
+        padding: 0px 30px;
+    }
+    &_name {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 140.3%;
+        color: #000000;   
+    }
+    &_author {
+        font-size: 20px;
+        line-height: 130%;
+        color: #424242;
+    }
+    &_button {
+        display: flex;
+        justify-content: center;
+        margin-top: 80px;
+    }
+}

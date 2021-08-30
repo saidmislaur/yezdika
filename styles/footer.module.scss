@@ -1,0 +1,68 @@
+.footer {
+    padding: 80px 35px;
+    display: flex;
+    justify-content: space-around;
+ 
+    &_logo {
+        width: 378px;
+        height: 108px;  
+    }
+    &_nav {
+        margin-left: 200px;
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 19px;
+                width: 40%;
+                margin-bottom: 30px;
+
+                @media (max-width: 768px) {
+                    width: auto;
+                    margin-right: 50px;
+                }
+            }
+        }
+        &__confidentiality {
+            font-size: 16px;
+            line-height: 19px;
+
+            color: #6A6A6A;
+        }
+    }
+    &_social {
+        ul {
+            display: flex;
+            li {
+                margin-right: 50px;
+                a {
+                    img {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+        }
+    }
+    // .list {
+    //     display: flex;
+    //     flex-wrap: wrap;
+      
+    //     &__item {
+    //       width: 50%;
+      
+    //       @media (max-width: 768px) {
+    //         width: auto;
+    //         margin-right: 50px;
+    //       }
+    //     }
+    //   }
+    h4 {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 28px;
+    }
+}

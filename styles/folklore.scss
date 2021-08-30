@@ -1,0 +1,71 @@
+@media (max-width: 1920px){
+    .folklore {
+        background: #212121;
+        padding-top: 80px;
+        &_title {
+            font-weight: bold;
+            font-size: 50px;
+            line-height: 60px;
+            color: #FFFFFF;
+            text-align: center;
+        }
+        &_button {
+            display: flex;
+            justify-content: center;
+            
+            button {
+                padding: 16px 52px;
+                border: 2px solid #ffffff;
+                box-sizing: border-box;
+                border-radius: 5px;
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 140.3%;
+                color: white;
+                background: transparent;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                margin-bottom: 80px;
+        
+                img {
+                    width: 18px;
+                    height: 14px;
+                    margin-left: 23px;
+                }
+            }
+        }
+
+        &_slider {
+            margin-top: 80px;
+            margin-bottom: 80px;
+            padding: 0px 30px;
+            img {
+                width: 400px;
+                height: 360px;
+                margin-left: 15px;
+            }
+            .slide_card {
+                position: relative;
+                .slide_span {
+                    width: 300px;
+                    position: absolute;
+                    bottom: 35px;
+                    left: 35px;
+                    span {
+                        color: white;
+                        font-weight: 500;
+                        font-size: 30px;
+                        line-height: 36px;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+
+//размер экрана больше 1920px/////////////
+
+

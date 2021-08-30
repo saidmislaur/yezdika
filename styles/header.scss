@@ -1,0 +1,24 @@
+.header {
+    background-color: white;
+    padding: 50px 100px;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &_logo {
+        width: 300;
+        img {
+            width: 100%;
+        }
+    }
+
+    &_nav {
+        ul {
+            display: flex;
+            margin-top: 15px;
+            li {
+                margin-right: 40px;
+            }
+        }
+    }
+}
