@@ -4,14 +4,43 @@ import { FolklorCard } from "./FolklorCard";
 
 
 export const Slide = () => {
-    const settings = {
-      className: "center",
-      centerMode: true,
-      infinite: true,
-      centerPadding: "60px",
-      slidesToShow: 3,
-      speed: 500
-    }
+  const settings = {
+    className: "center",
+    centerMode: true,
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    canterPadding: "0px",
+    responsive: [
+      {
+        breakpoint: 1366,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          canterPadding: "0px",
+        }
+      }
+    ]
+  };
     return (
       <div>
         <Slider {...settings}>

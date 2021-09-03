@@ -25,7 +25,8 @@ export default function Home() {
               <span>История Ингушетии</span>
               <h1>Материалы по истории и этнографии Ингушетии</h1>
             </div>
-            <div className="articles">
+        </div>
+        <div className="articles">
               <div className="container">
                 <h1 className="articles_title">Статьи</h1>
                 <div className="articles_card">
@@ -41,12 +42,11 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <Folklore />
-            <Artefacts />
-            <Gallery />
-            <Books />
-            <Footer />
-        </div>
+        <Folklore />
+        <Artefacts />
+        <Gallery />
+        <Books />
+        <Footer />
       </div> 
     </div>
     </>

@@ -14,8 +14,19 @@ a {
   text-decoration: none;
 }
 
+.slick-dots {
+  display: none !important;
+}
 
-@media (min-width: 2560px){
+.slick-prev, .slick-next {
+  width: 77px !important;
+  height: 77px !important;
+  background: rgba(174, 174, 174, 0.5) !important;
+  border-radius: 5px !important;
+  z-index: 1;
+}
+
+@media (min-width: 2560px) {
   .container {
     max-width: 1920px;
     margin: auto;
@@ -142,6 +153,10 @@ a {
     margin-top: 80px;
     flex-wrap: wrap;
     justify-content: space-evenly;
+
+    img {
+      width: 100%;
+    }
   }
   &_title {
     text-align: center;
@@ -149,6 +164,35 @@ a {
     font-size: 50px;
     line-height: 60px;
     margin-top: 120px;
+  }
+}
+
+@media (max-width: 1024px){
+  .mainVideo {
+    height: auto;
+    img {
+      height: 500px;
+      
+    }
+    &_title {
+      bottom: 190px;
+      width: 291px;
+      margin-left: 22px;
+      h1 {
+        font-size: 24px;
+        line-height: 117.8%;
+        letter-spacing: -0.03em;
+      }
+      span {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .articles {
+    &_title {
+      margin-top: 50px;
+    }
   }
 }
 

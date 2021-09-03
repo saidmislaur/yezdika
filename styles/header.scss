@@ -12,13 +12,29 @@
         }
     }
 
-    &_nav {
+    &_nav {  
         ul {
             display: flex;
             margin-top: 15px;
             li {
                 margin-right: 40px;
             }
+        }
+    }
+}
+
+// Адаптивные стили
+
+@media (max-width: 1024px) {
+    .header {
+        display: inline-block;
+        padding: 18px 22px;
+
+        &_logo {
+            width: 100px
+        }
+        &_nav {
+            display: none;
         }
     }
 }

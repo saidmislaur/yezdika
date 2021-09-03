@@ -62,3 +62,22 @@
         }
     }
 }
+
+@media (max-width: 786px) {
+    .card {
+        width: 284px;
+        height: 215px;
+
+        &_text {
+            width: 100%;
+
+            h2 {
+                font-size: 16px;
+                line-height: normal
+            }
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+}

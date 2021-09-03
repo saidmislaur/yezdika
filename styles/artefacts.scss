@@ -10,6 +10,15 @@
     }
     &_content {
         margin-top: 80px;
+
+        .slick-prev {
+            left:  -110px;
+            top: 170px;
+        }
+        .slick-next {
+            right: -110px;
+            top: 170px;
+        }
     }
     &_artefactsCard {
         width: 360px;
@@ -39,7 +48,7 @@
         margin-top: 80px;
         display: flex;
         justify-content: center;
-    }
+    }    
 }
 
 .slick-slide img {
@@ -47,5 +56,57 @@
     text-align: center;
 }
 
-// .slick-arrow slick-prev
-// slick-arrow slick-next
+@media (max-width: 1024px) {
+    .artefacts {
+        padding: 0px;
+        &_title {
+            font-size: 20px;
+            margin-top: 30px;
+        }
+        &_artefactsCard{
+            margin-left: 10px;
+            width: 195px;
+            img {
+                width: 180px;
+                height: 180px;
+            }
+            h3 {
+                font-size: 12px;
+                line-height: 140.3%;
+            }
+            p {
+                font-size: 10px;
+                line-height: 12px;  
+            }
+        }
+        &_content {
+            margin-top: 10px;
+            .slick-next {
+                right: 15px;
+                width: 30px !important;
+                height: 30px !important;
+                top: 100px !important;
+            }
+            .slick-prev{
+                left: 15px;
+                width: 30px !important;
+                height: 30px !important;
+                top: 100px !important;
+            }
+        }
+        &_button {
+            margin-top: 30px;
+            button {
+                padding: 16px 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .artefacts {
+        &_artefactsCard {
+            margin-left: 10px;
+        }
+    }
+}
