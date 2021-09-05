@@ -50,6 +50,7 @@ const Footer = () => {
                     </ul>
                 </nav>
             </div>
+            <div className={styles.footer_line}></div>
             <div className={styles.footer_social}>
                 <h4>Мы в сети</h4>
                 <ul>

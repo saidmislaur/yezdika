@@ -21,3 +21,19 @@
         color: #FFFFFF;
     }
 }
+
+@media (max-width: 800px) {
+    .gallery {
+        &_title {
+            padding-top: 30px;
+            font-size: 22px;
+        }
+        &_card {
+            margin-top: 25px;
+            img {
+                width: 300px;
+                height: 250px;
+            }
+        }
+    }
+}

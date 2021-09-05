@@ -1,0 +1,104 @@
+.books {
+    background: #F9F9F9;
+    &_title {
+        font-weight: bold;
+        font-size: 50px;
+        line-height: 60px;
+        color: #000000;
+        text-align: center;
+        margin-top: 80px;
+        padding-top: 30px;
+    }
+    &_card {
+        margin-top: 80px;
+        margin-left: 30px;
+        img {
+            width: 350px;
+            height: 480px;
+        }
+        span {
+            display: block;
+        }
+    }
+    &_slider { 
+        padding: 0px 30px;
+    }   
+    &_name {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 140.3%;
+        color: #000000;   
+    }
+    &_author {
+        font-size: 20px;
+        line-height: 130%;
+        color: #424242;
+    }
+    &_button {
+        display: flex;
+        justify-content: center;
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .books {
+        &_title {
+            font-size: 20px;
+            line-height: 24px;
+        }
+        &_slider {
+            padding: 0px;
+            .slick-next {
+                right: 10px;
+                width: 30px !important;
+                height: 30px !important;
+                top: 140px !important;
+            }
+            .slick-prev{
+                left: 10px;
+                width: 30px !important;
+                height: 30px !important;
+                top: 140px !important;
+            }
+        }
+        &_card {
+            margin-top: 25px;
+            margin-left: 25px;
+            img {
+                width: 175px;
+                height: 215px;
+            }
+        }
+        &_name {
+            font-size: 12px;
+            line-height: 140.3%;
+        }
+        &_author {
+            font-size: 12px;
+            line-height: 130%;
+            color: #424242;
+        }
+        &_button {
+            margin-top: 30px;
+            margin-bottom: 50px;
+            button {
+                padding: 16px 30px;
+                font-size: 16px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .books {
+        &_card {
+            margin-left: 15px;
+        }
+    }
+}
+
+
+
+

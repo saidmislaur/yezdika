@@ -1,8 +1,11 @@
+import React, {useState} from 'react';
 import Link from 'next/link';
+import HeaderMenu from './HeaderMenu';
 
 
 
 export default function Header() {
+   const [menuActive, setMenuActive] = useState(false)
    return (
       <div className='header'>
          <div className="header_logo">
@@ -44,6 +47,12 @@ export default function Header() {
                </ul>
             </nav>
          </div>
+         <div className="header_burger" onClick={() => setMenuActive(true)}>
+            <div className="header_burger__btn">
+               <span />
+            </div>
+         </div>
+         <HeaderMenu active={menuActive} setActive={setMenuActive}/>
       </div>
    )
 }

@@ -25,6 +25,9 @@ a {
   border-radius: 5px !important;
   z-index: 1;
 }
+@media (max-width: 1024px) {
+  
+}
 
 @media (min-width: 2560px) {
   .container {
@@ -191,7 +194,11 @@ a {
 
   .articles {
     &_title {
-      margin-top: 50px;
+      margin-top:30px;
+      font-size: 22px;
+    }
+    &_card {
+      margin-top: 25px;
     }
   }
 }

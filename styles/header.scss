@@ -21,13 +21,19 @@
             }
         }
     }
+    &_burger {
+        display: none;
+    }
+    &_menu {
+        display: none;
+    }
 }
 
 // Адаптивные стили
 
 @media (max-width: 1024px) {
     .header {
-        display: inline-block;
+        display: flex;
         padding: 18px 22px;
 
         &_logo {
@@ -35,6 +41,88 @@
         }
         &_nav {
             display: none;
+        }
+        &_burger {
+            display: block;
+            position: relative;
+            &__btn {
+                margin-top: 10px;
+                width: 13px;
+                height: 2px;
+                margin-left: 20px;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0; 
+                    width: 18px;
+                    height: 2px;
+                    background-color: #1C1C1C;
+                }
+                span {
+                    content: '';
+                    position: absolute;
+                    top: 10px; 
+                    width: 18px;
+                    height: 2px;
+                    background-color: #1C1C1C;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 5px;
+                    width: 18px;
+                    height: 2px;
+                    background-color: #1C1C1C;
+                }
+            }
+        }
+        &_menu {
+            display: block;
+            background-color: #1C1C1C;
+            width: 310px;
+            height: 720px;
+            z-index: 1;
+            position: fixed;
+            top: 0;
+            right: 0px;
+            padding-top: 20px;
+            transform: translateX(100%);
+            transition-duration: .3s;
+
+            &.active {
+                transform: translateX(0);    
+            }
+            
+            img {
+                margin-left: 20px;
+            }
+            
+            ul {
+                margin-top: 65px;
+                margin-left: 55px;
+                li {
+                    font-weight: bold;
+                    font-size: 16px;
+                    line-height: 19px;
+                    margin-bottom: 25px;
+                    color: #FFFFFF;
+                }
+            }
+            h4 {
+                color: white;
+            }
+            .footer_footer_line__2rr-O {
+                background-color:  rgba(255, 255, 255, 0.2);
+            }
+            .footer_footer_social__1PKFY {
+                margin-left: 50px;
+                padding: 0px;
+
+                ul {
+                    margin: 0px;
+                    margin-top: 15px;
+                }
+            }
         }
     }
 }
