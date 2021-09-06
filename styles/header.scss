@@ -18,6 +18,22 @@
             margin-top: 15px;
             li {
                 margin-right: 40px;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 19px;
+                color: #000000;
+                position: relative;
+
+                &:hover {
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        bottom: -6px; 
+                        width: 100%;
+                        height: 2px;
+                        background-color: #1C1C1C;
+                    }
+                }
             }
         }
     }
