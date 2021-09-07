@@ -27,9 +27,13 @@ a {
   
 }
 
-@media (min-width: 2560px) {
+@media (min-width: 1922px) {
   .container {
     max-width: 1920px;
+    margin: auto;
+  }
+  .section {
+    max-width: 1921px;
     margin: auto;
   }
 }

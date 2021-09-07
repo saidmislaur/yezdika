@@ -19,7 +19,7 @@ const BooksSlide = ({styles}) => {
       slidesToShow: 3,
       slidesToScroll: 1,
       initialSlide: 0,
-      centerPadding: "110px",
+      centerPadding: "170px",
       responsive: [
         {
           breakpoint: 1366,

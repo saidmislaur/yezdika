@@ -38,7 +38,6 @@
         &_slider {
             margin-top: 80px;
             margin-bottom: 80px;
-            padding: 0px 30px;
             img {
                 width: 400px;
                 height: 360px;
@@ -62,10 +61,10 @@
             }
         }
         .slick-prev {
-            left: 0px;
+            left: 30px;
         }
         .slick-next {
-            right: 0px;
+            right: 30px;
         }
         .slick-prev, .slick-next {
             width: 77px !important;

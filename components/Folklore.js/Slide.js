@@ -13,7 +13,7 @@ export const Slide = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
-    canterPadding: "0px",
+    centerPadding: "120px",
     responsive: [
       {
         breakpoint: 1366,

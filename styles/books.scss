@@ -21,7 +21,12 @@
         }
     }
     &_slider { 
-        padding: 0px 30px;
+        .slick-next {
+            right: 30px;
+        }
+        .slick-prev{
+            left: 30px;
+        }
     }   
     &_name {
         font-weight: bold;

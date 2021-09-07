@@ -5,6 +5,8 @@ import styles from '../../styles/footer.module.scss';
 const Footer = () => {
     return (
         <div className={styles.footer}>
+            <div className={styles.footer_lineDesk}></div>
+            <div className={styles.footer_content}>
             <div className={styles.footer_logo}>
                 <img src="./img/logo.png" alt="Logo"/>
             </div>
@@ -76,6 +78,8 @@ const Footer = () => {
                     </li>
                 </ul>
             </div>
+            </div>
+            
         </div>
     )
 }
