@@ -68,7 +68,7 @@ const Footer = () => {
                     </li>
                     <li>
                         <a hraf="#">
-                            <img src="./img/youtube.svg" />
+                            <img src="./img/Youtube.svg" />
                         </a>
                     </li>  
                     <li> 
