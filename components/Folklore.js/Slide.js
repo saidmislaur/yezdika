@@ -27,8 +27,9 @@ export const Slide = () => {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
+          centerPadding: "0px",
         }
       },
       {
@@ -36,7 +37,7 @@ export const Slide = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          canterPadding: "0px",
+          centerPadding: "50px",
         }
       }
     ]
