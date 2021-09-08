@@ -3,13 +3,6 @@ import Slider from "react-slick";
 import { ArtefactsCard } from './ArtefactsCard';
 
 export const ArtefactsSlide = () => {
-    // const settings = {
-    //     focusOnSelect: false,
-    //     infinite: true,
-    //     slidesToShow: 3,
-    //     slidesToScroll: 1,
-    //     speed: 500
-    //   };
     const settings = {
         className: "center",
         centerMode: true,

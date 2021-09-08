@@ -1,15 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 
-const BooksSlide = ({styles}) => {
-    // const settings = {
-    //   className: "center",
-    //   centerMode: true,
-    //   infinite: true,
-    //   centerPadding: "180px",
-    //   slidesToShow: 3,
-    //   speed: 500
-    // }
+const BooksSlide = () => {
     const settings = {
       className: "center",
       centerMode: true,

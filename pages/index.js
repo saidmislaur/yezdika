@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import { Artefacts } from '../components/Artefacts/Artefacts';
 import { Books } from '../components/Books/Books';
-import { Button } from "../components/button"
 import { Card } from "../components/Card"
 import { Folklore } from '../components/Folklore.js/Folklore';
 import Footer from '../components/Footer/Footer';
@@ -38,7 +37,10 @@ export default function Home() {
                   <Card image={'./img/card3.jpg'} title='Ингушетия. Таргимские храмы'/>
                 </div>
                 <div className="articles_button">
-                  <Button text="Все статьи"/>
+                <button className={`button red`}>
+                все статьи
+                <img src='./img/arrwhite.svg' alt="arr"/>
+            </button>
                 </div>
               </div>
             </div>
