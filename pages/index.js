@@ -4,7 +4,7 @@ import { Books } from '../components/Books/Books';
 import { Card } from "../components/Card"
 import { Folklore } from '../components/Folklore.js/Folklore';
 import Footer from '../components/Footer/Footer';
-import { Gallery } from '../components/Gallery/gallery';
+import { Gallery } from '../components/Gallery/Gallery';
 import Header from "../components/Header"
 // import Link from 'next/link';
 // import Router from "next/router";
