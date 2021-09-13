@@ -37,10 +37,9 @@ export default function Home() {
                   <Card image={'./img/card3.jpg'} title='Ингушетия. Таргимские храмы'/>
                 </div>
                 <div className="articles_button">
-                <button className={`button red`}>
-                все статьи
-                <img src='./img/arrwhite.svg' alt="arr"/>
-            </button>
+                <button className={`button red`}>смотреть все
+                  <img src="./img/arrow.svg" alt="arr"/>
+                </button>
                 </div>
               </div>
             </div>

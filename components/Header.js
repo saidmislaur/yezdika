@@ -9,7 +9,9 @@ export default function Header() {
    return (
       <div className='header'>
          <div className="header_logo">
-            <img src="./img/logo.png" alt="Logo"/>
+            <Link href='/'>
+               <img src="./img/logo.png" alt="Logo"/>
+            </Link>
          </div>
          <div className="header_nav">
             <nav>
@@ -20,7 +22,7 @@ export default function Header() {
                      </Link>
                   </li>
                   <li>
-                     <Link href='#'>
+                     <Link href='/articles'>
                         <a>Статьи</a>
                      </Link>
                   </li>
@@ -32,6 +34,11 @@ export default function Header() {
                   <li>
                      <Link href='#'>
                         <a>Артефакты</a>
+                     </Link>
+                  </li>
+                  <li>
+                     <Link href='/gallery'>
+                        <a>Галерея</a>
                      </Link>
                   </li>
                   <li>

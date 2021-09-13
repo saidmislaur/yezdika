@@ -1,6 +1,6 @@
 .header {
     background-color: white;
-    padding: 50px 100px;
+    padding: 30px 100px;
     font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: space-between;
@@ -51,7 +51,7 @@
     .header {
         display: flex;
         padding: 18px 22px;
-
+        background-color: #E4E4E4;
         &_logo {
             width: 100px
         }

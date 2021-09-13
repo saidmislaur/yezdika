@@ -1,8 +1,7 @@
 import React from 'react';
 import Card from '../Card';
-import Button from '../ButtonC';
 
-export const Articles = () => {
+export const  Articles = () => {
     return (
         <div className="articles">
             <div className="container">
@@ -16,7 +15,9 @@ export const Articles = () => {
                 <Card image={'./img/card3.jpg'} title='Ингушетия. Таргимские храмы'/>
             </div>
             <div className="articles_button">
-                <Button text="Все статьи"/>
+            <button className={`button red`}>смотреть все
+                <img src="./img/arrow.svg" alt="arr"/>
+            </button>
             </div>
             </div>
         </div>
