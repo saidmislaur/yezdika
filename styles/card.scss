@@ -67,16 +67,20 @@
     .card {
         width: 284px;
         height: 215px;
-        margin-bottom: 290px;
+        margin-bottom: 240px;
         &_text {
             width: 100%;
-
+            margin-top: 5px;
             h2 {
+                margin-bottom: 5px;
                 font-size: 16px;
                 line-height: normal
             }
             p {
                 font-size: 12px;
+            }
+            span {
+                margin-top: 10px;
             }
         }
     }

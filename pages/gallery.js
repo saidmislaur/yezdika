@@ -24,8 +24,8 @@ export default function Gallery()  {
                 <GalleryCard image='./img/galleryPage/Rectangle 101.png' pageStyle="heigth" text="Размер: Общ.вые,- 30,5 см., выс. сосуда-24,5 см.. Д. тулова-14,5 см, Д.шейки ножки-8; 1см.-," />
             </div>
             <div className="buttonPag">
-                <Button text='предыдущая страница!' classes='prev'/>
-                <Button text='следующая страница!' classes='next'/>
+                <Button text='предыдущая страница' classes='prev'/>
+                <Button text='следующая страница' classes='next'/>
             </div>
             <Footer />
         </div>

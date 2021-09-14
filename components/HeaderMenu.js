@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Link from 'next/link';
 import styles from '../styles/footer.module.scss';
 
 const HeaderMenu = ({active, setActive}) => {
@@ -7,13 +7,41 @@ const HeaderMenu = ({active, setActive}) => {
         <div className={active ? "header_menu active" : "header_menu"}>
             <img src="./img/close.svg" alt="close" onClick={() => setActive(false)}/>
             <ul>
-                <li>Главная</li>
-                <li>Статьи</li>
-                <li>Фольклор</li>
-                <li>Артефакты</li>
-                <li>Галерея</li>
-                <li>Литература</li>
-                <li>Документы</li>
+            <li>
+                     <Link href='/'>
+                        <a>Главная</a>
+                     </Link>
+                  </li>
+                  <li>
+                     <Link href='/articles'>
+                        <a>Статьи</a>
+                     </Link>
+                  </li>
+                  <li>
+                     <Link href='#'>
+                        <a>Фольклор</a>
+                     </Link>
+                  </li>
+                  <li>
+                     <Link href='#'>
+                        <a>Артефакты</a>
+                     </Link>
+                  </li>
+                  <li>
+                     <Link href='/gallery'>
+                        <a>Галерея</a>
+                     </Link>
+                  </li>
+                  <li>
+                     <Link href='#'>
+                        <a>Литература</a>
+                     </Link>
+                  </li>
+                  <li>
+                     <Link href='#'>
+                        <a>Документы</a>
+                     </Link>
+                  </li>
             </ul>
             <div className={styles.footer_line}></div>
             <div className={styles.footer_social}>
