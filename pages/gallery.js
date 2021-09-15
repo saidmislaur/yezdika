@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Header from '../components/Header';
 import TitleBlock from '../components/TitleBlock/TitleBlock';
 import GalleryCard from '../components/Gallery/GalleryCard';
@@ -7,6 +8,9 @@ export default function Gallery()  {
     const articleImg = "./img/articleImg.jpg";
     return (
         <div className="galleryPage">
+            <Head>
+                <title>Галерея</title>
+             </Head>
             <Header />
             <TitleBlock title="Галерея" articleImg={articleImg}/>
             <div className="galleryPage_content">

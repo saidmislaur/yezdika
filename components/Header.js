@@ -16,7 +16,7 @@ export default function Header() {
          <div className="header_nav">
             <nav>
                <ul>
-                  <li>
+               <li>
                      <Link href='/'>
                         <a>Главная</a>
                      </Link>
@@ -27,12 +27,12 @@ export default function Header() {
                      </Link>
                   </li>
                   <li>
-                     <Link href='#'>
+                     <Link href='/folklor'>
                         <a>Фольклор</a>
                      </Link>
                   </li>
                   <li>
-                     <Link href='#'>
+                     <Link href='/artefacts'>
                         <a>Артефакты</a>
                      </Link>
                   </li>
@@ -42,12 +42,12 @@ export default function Header() {
                      </Link>
                   </li>
                   <li>
-                     <Link href='#'>
+                     <Link href='/literature'>
                         <a>Литература</a>
                      </Link>
                   </li>
                   <li>
-                     <Link href='#'>
+                     <Link href='/documents'>
                         <a>Документы</a>
                      </Link>
                   </li>

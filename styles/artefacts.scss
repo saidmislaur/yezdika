@@ -43,6 +43,9 @@
             text-align: center;
             color: #626262;
         }
+        &-widthHeight {
+            margin: 40px;
+        }
     }
     &_button {
         margin-top: 80px;
@@ -56,6 +59,15 @@
     text-align: center;
 }
 
+.artefactsPage{
+    &_content {
+        padding: 0px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 70px;
+    }
+}
 @media (max-width: 1024px) {
     .artefacts {
         padding: 0px;
@@ -105,10 +117,44 @@
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
     .artefacts {
         &_artefactsCard {
             margin-left: 10px;
+
+            &-widthHeight {
+                border-top: 1px solid rgba(0, 0, 0, 0.2);
+                width: 362px;
+                height: 233px;
+                margin-left: 40px;
+                margin-bottom: 100px;
+                position: relative;
+                padding-top: 10px;
+                text-align: inherit;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    text-align: inherit;
+                }
+                h3 {
+                    position: absolute;
+                    top: -55px;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 19px;
+                    text-align: inherit;
+                }
+                p {
+                    font-size: 12px;
+                    line-height: 16px;
+                    text-align: inherit;
+                }
+            }
+        }
+    }
+    .artefactsPage{
+        &_content {
+            margin-bottom: 50px;
         }
     }
 }

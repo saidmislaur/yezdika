@@ -7,7 +7,7 @@ const HeaderMenu = ({active, setActive}) => {
         <div className={active ? "header_menu active" : "header_menu"}>
             <img src="./img/close.svg" alt="close" onClick={() => setActive(false)}/>
             <ul>
-            <li>
+                <li>
                      <Link href='/'>
                         <a>Главная</a>
                      </Link>
@@ -18,12 +18,12 @@ const HeaderMenu = ({active, setActive}) => {
                      </Link>
                   </li>
                   <li>
-                     <Link href='#'>
+                     <Link href='/folklor'>
                         <a>Фольклор</a>
                      </Link>
                   </li>
                   <li>
-                     <Link href='#'>
+                     <Link href='/artefacts'>
                         <a>Артефакты</a>
                      </Link>
                   </li>
@@ -33,12 +33,12 @@ const HeaderMenu = ({active, setActive}) => {
                      </Link>
                   </li>
                   <li>
-                     <Link href='#'>
+                     <Link href='/literature'>
                         <a>Литература</a>
                      </Link>
                   </li>
                   <li>
-                     <Link href='#'>
+                     <Link href='/documents'>
                         <a>Документы</a>
                      </Link>
                   </li>
