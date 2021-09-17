@@ -4,7 +4,7 @@ import TitleBlock from '../components/TitleBlock/TitleBlock';
 import { ArtefactsCard } from '../components/Artefacts/ArtefactsCard';
 import Button from '../components/button';
 import Footer from '../components/Footer/Footer';
-export default function Gallery()  {
+export default function Artefacts()  {
     const articleImg = "./img/articleImg.jpg";
     return (
         <div className="artefactsPage">

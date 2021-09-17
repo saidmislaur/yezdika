@@ -66,6 +66,7 @@
         flex-wrap: wrap;
         justify-content: center;
         margin-top: 70px;
+        margin-bottom: 90px;
     }
 }
 @media (max-width: 1024px) {
@@ -154,7 +155,7 @@
     }
     .artefactsPage{
         &_content {
-            margin-bottom: 50px;
+            margin-bottom: 100px;
         }
     }
 }
