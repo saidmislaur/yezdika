@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 
-const BooksSlide = () => {
+const BooksSlide = ({lists}) => {
     const settings = {
       className: "center",
       centerMode: true,
@@ -49,51 +49,22 @@ const BooksSlide = () => {
         }
       ]
     };
+
+    console.log(lists)
     return (
       <div>
         <Slider {...settings}>
-          <div className="books_card">
-            <img src='./img/book1.jpg' alt="bookImg" />
-            <div className="books_info">
-              <span className="books_name">История Ингушского народа</span>
-              <span className="books_author">Автор: Н.Д. Кодзоев 1</span>
-            </div>
-          </div>
-          <div className="books_card">
-            <img src='./img/book1.jpg' alt="bookImg" />
-            <div className="books_info">
-              <span className="books_name">История Ингушского народа</span>
-              <span className="books_author">Автор: Н.Д. Кодзоев 1</span>
-            </div>
-          </div>
-          <div className="books_card">
-            <img src='./img/book1.jpg' alt="bookImg" />
-            <div className="books_info">
-              <span className="books_name">История Ингушского народа</span>
-              <span className="books_author">Автор: Н.Д. Кодзоев 1</span>
-            </div>
-          </div>
-          <div className="books_card">
-            <img src='./img/book1.jpg' alt="bookImg" />
-            <div className="books_info">
-              <span className="books_name">История Ингушского народа</span>
-              <span className="books_author">Автор: Н.Д. Кодзоев 1</span>
-            </div>
-          </div>
-          <div className="books_card">
-            <img src='./img/book1.jpg' alt="bookImg" />
-            <div className="books_info">
-              <span className="books_name">История Ингушского народа</span>
-              <span className="books_author">Автор: Н.Д. Кодзоев 1</span>
-            </div>
-          </div>
-          <div className="books_card">
-            <img src='./img/book1.jpg' alt="bookImg" />
-            <div className="books_info">
-              <span className="books_name">История Ингушского народа</span>
-              <span className="books_author">Автор: Н.Д. Кодзоев 1</span>
-            </div>
-          </div>
+          { 
+            lists.map((item, index) => (
+              <div key={item.id + index} className="books_card">
+                <img src='./img/book1.jpg' alt="bookImg" />
+                <div className="books_info">
+                  <span className="books_name">{item.name}</span>
+                  <span className="books_author">Автор: {item.author}</span>
+                </div>
+              </div>
+            ))
+          }
         </Slider>
       </div>
     );

@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from '../Card';
 
-export const  Articles = () => {
+export default function Articles(){ 
     return (
         <div className="articles">
             <div className="container">

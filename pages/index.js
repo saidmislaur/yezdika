@@ -1,4 +1,6 @@
+import React, {useState, useEffect} from 'react';
 import Head from 'next/head';
+import axios from 'axios';
 import { Artefacts } from '../components/Artefacts/Artefacts';
 import { Books } from '../components/Books/Books';
 import { Card } from "../components/Card"
@@ -6,10 +8,34 @@ import { Folklore } from '../components/Folklore.js/Folklore';
 import Footer from '../components/Footer/Footer';
 import { Gallery } from '../components/Gallery/Gallery';
 import Header from "../components/Header"
-// import Link from 'next/link';
-// import Router from "next/router";
+
 
 export default function Home() {
+  const [posts, setPosts] = useState([]);
+  const [folklorList, setFolklorList] = useState([]);
+  const [artefactList, setArtefactList] = useState([]);
+  const [galleryList, setGalleryList] = useState([]);
+  const [booksList, setBooksList] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const postsResponse = await axios.get('http://localhost:4000/posts');
+      const folklorResponse = await axios.get('http://localhost:4000/folklor');
+      const artefactResponse = await axios.get('http://localhost:4000/artefacts');
+      const galleryResponse = await axios.get('http://localhost:4000/gallery');
+      const booksResponse = await axios.get('http://localhost:4000/books');
+
+      setPosts(postsResponse.data);
+      setFolklorList(folklorResponse.data);
+      setArtefactList(artefactResponse.data);
+      setGalleryList(galleryResponse.data);
+      setBooksList(booksResponse.data);
+    }
+    fetchData();
+  }, []);
+
+  console.log(posts)
+
   return (
     <>
     <Head>
@@ -26,27 +52,22 @@ export default function Home() {
             </div>
         </div>
         <div className="articles">
-              <div className="container">
-                <h1 className="articles_title">Статьи</h1>
-                <div className="articles_card">
-                  <Card image={'./img/card1.jpg'} title='Почему ингушей считали самым опасным народом Кавказа' data=''/>
-                  <Card image={'./img/card2.jpg'} title='Ингушетия. Таргимские храмы'/>
-                  <Card image={'./img/card3.jpg'} title='Почему ингушей считали самым опасным народом Кавказа'/>
-                  <Card image={'./img/card1.jpg'} title='Почему ингушей считали самым опасным народом Кавказа' data=''/>
-                  <Card image={'./img/card2.jpg'} title='Ингушетия. Таргимские храмы Ингушетия'/>
-                  <Card image={'./img/card3.jpg'} title='Ингушетия. Таргимские храмы'/>
-                </div>
-                <div className="articles_button">
-                <button className={`button red`}>смотреть все
-                  <img src="./img/arrow.svg" alt="arr"/>
-                </button>
-                </div>
-              </div>
+          <div className="container">
+            <h1 className="articles_title">Статьи</h1>
+            <div className="articles_card">
+              <Card posts={posts} />
             </div>
-        <Folklore />
-        <Artefacts />
-        <Gallery />
-        <Books />
+            <div className="articles_button">
+            <button className={`button red`}>смотреть все
+              <img src="./img/arrow.svg" alt="arr"/>
+            </button>
+            </div>
+          </div>
+        </div>
+        <Folklore lists={folklorList}/>
+        <Artefacts lists={artefactList}/>
+        <Gallery lists={galleryList}/>
+        <Books lists={booksList}/>
         <Footer />
       </div> 
     </div>

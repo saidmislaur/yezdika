@@ -1,8 +1,7 @@
 import React from 'react';
 import Slider from "react-slick";
-import { ArtefactsCard } from './ArtefactsCard';
 
-export const ArtefactsSlide = () => {
+export const ArtefactsSlide = ({lists, stylePage}) => {
     const settings = {
         className: "center",
         centerMode: true,
@@ -53,30 +52,16 @@ export const ArtefactsSlide = () => {
     return (
         <div className="artefacts_content">
         <Slider {...settings}>
-            <ArtefactsCard 
-                image="./img/Ellipse17.jpg" 
-                title="Металлическая ваза «буккеро» Предположительно VII в. до н. э." 
-                text="Размер: Общ.вые,- 30,5 см., выс. сосуда-24,5 см.. Д. тулова-14,5 см, Д.шейки ножки-8; 1 см. Д.дна-11,4 см"/>
-           <ArtefactsCard 
-                image="./img/Ellipse18.jpg" 
-                title="Фигура мифической животного в виде кошки. Бронза, чеканка, гравировка" 
-                text="Размер: Общ.вые,- 30,5 см., выс. сосуда-24,5 см.. Д. тулова-14,5 см, Д.шейки ножки-8; 1 см. Д.дна-11,4 см"/>
-            <ArtefactsCard 
-                image="./img/Ellipse19.jpg" 
-                title="Металлическая ваза «буккеро» Предположительно VII в. до н. э." 
-                text="Размер: Общ.вые,- 30,5 см., выс. сосуда-24,5 см.. Д. тулова-14,5 см, Д.шейки ножки-8; 1 см. Д.дна-11,4 см"/>
-            <ArtefactsCard 
-                image="./img/Ellipse17.jpg" 
-                title="Металлическая ваза «буккеро» Предположительно VII в. до н. э." 
-                text="Размер: Общ.вые,- 30,5 см., выс. сосуда-24,5 см.. Д. тулова-14,5 см, Д.шейки ножки-8; 1 см. Д.дна-11,4 см"/>
-            <ArtefactsCard 
-                image="./img/Ellipse18.jpg" 
-                title="Металлическая ваза «буккеро» Предположительно VII в. до н. э." 
-                text="Размер: Общ.вые,- 30,5 см., выс. сосуда-24,5 см.. Д. тулова-14,5 см, Д.шейки ножки-8; 1 см. Д.дна-11,4 см"/>
-            <ArtefactsCard 
-                image="./img/Ellipse19.jpg" 
-                title="Металлическая ваза «буккеро» Предположительно VII в. до н. э." 
-                text="Размер: Общ.вые,- 30,5 см., выс. сосуда-24,5 см.. Д. тулова-14,5 см, Д.шейки ножки-8; 1 см. Д.дна-11,4 см"/>
+        {
+            lists.map((item, index) => (
+                <div key={item.id + index} className={`artefacts_artefactsCard artefacts_artefactsCard-${stylePage}`}>
+                    <img src={item.image} />
+                    <h3>{item.title}</h3>
+                    <p>{item.text}
+                    </p>
+                </div>
+            ))
+        }
         </Slider>
       </div>
     )

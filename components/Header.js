@@ -5,7 +5,34 @@ import HeaderMenu from './HeaderMenu';
 
 
 export default function Header() {
-   const [menuActive, setMenuActive] = useState(false)
+   const [menuActive, setMenuActive] = useState(false);
+
+   const menu = [
+      {
+         text: "Статьи",
+         page: "articles"
+      },
+      {
+         text: "Фольклор",
+         page: "folklor"
+      },
+      {
+         text: "Артефакты",
+         page: "artefacts"
+      },
+      {
+         text: "Галерея",
+         page: "gallery"
+      },
+      {
+         text: "Литература",
+         page: "literature"
+      },
+      {
+         text: "Документы",
+         page: "documents"
+      },
+   ];
    return (
       <div className='header'>
          <div className="header_logo">
@@ -16,41 +43,20 @@ export default function Header() {
          <div className="header_nav">
             <nav>
                <ul>
-               <li>
-                     <Link href='/'>
+                  <li>
+                     <Link href="/">
                         <a>Главная</a>
                      </Link>
                   </li>
-                  <li>
-                     <Link href='/articles'>
-                        <a>Статьи</a>
-                     </Link>
-                  </li>
-                  <li>
-                     <Link href='/folklor'>
-                        <a>Фольклор</a>
-                     </Link>
-                  </li>
-                  <li>
-                     <Link href='/artefacts'>
-                        <a>Артефакты</a>
-                     </Link>
-                  </li>
-                  <li>
-                     <Link href='/gallery'>
-                        <a>Галерея</a>
-                     </Link>
-                  </li>
-                  <li>
-                     <Link href='/literature'>
-                        <a>Литература</a>
-                     </Link>
-                  </li>
-                  <li>
-                     <Link href='/documents'>
-                        <a>Документы</a>
-                     </Link>
-                  </li>
+                  {
+                     menu.map((item) => (
+                        <li key={item}>
+                           <Link href={`/${item.page}`}>
+                              <a>{item.text}</a>
+                           </Link>
+                        </li>
+                     ))
+                  }
                </ul>
             </nav>
          </div>

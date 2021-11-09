@@ -1,18 +1,23 @@
 import React from 'react'
 
-export const Card = ({image, title}) => {
+export const Card = ({posts}) => {
+    const test = (id) => {
+        alert(id);
+    }
     return (
-        <div className="card">
-           <img src={image} alt="Logo"/>
-           <div className="card_text">
-            <h2>{title}</h2>
-            <p>
-                Малочисленные, но крепко спаянные и прекрасно вооруженные ингуши 
-                держали в страхе всю Терскую область. Этнографы того времени отмечали, 
-                что ингуш жертвовал всем ради оружия...
-                </p>
-                <span>25 июня, 2021г.</span>
-           </div>
-        </div>
+        <>
+            {posts.map((item) => (
+                <div key={item.id} className="card" onClick={() => test(item.id)}>
+                    <img src={item.image} alt="Logo" />
+                    <div className="card_text">
+                        <h2>{item.title}</h2>
+                        <p>
+                           {item.text.length > 250 ? `${item.text.substring(0, 200)}...` : item.text}
+                        </p>
+                        <span>{item.published}</span>
+                    </div>
+                </div>
+            ))}
+        </>
     )
 }

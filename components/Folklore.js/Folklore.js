@@ -3,12 +3,12 @@ import { Slide } from './Slide';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
-export const Folklore = () => {
+export const Folklore = ({lists}) => {
     return (
         <div className='folklore'>
             <h1 className="folklore_title">Фольклор</h1>
             <div className="folklore_slider">
-                <Slide />
+                <Slide lists={lists}/>
             </div>
             <div className="folklore_button">
                 <button className="button">смотреть все

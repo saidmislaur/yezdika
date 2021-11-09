@@ -3,12 +3,12 @@ import BooksSlide from './BooksSlide';
 
 
 
-export const Books = () => {
+export const Books = ({lists}) => {
     return (
         <div className="books">
             <h1 className="books_title">Литература</h1>
             <div className="books_slider">
-                <BooksSlide />
+                <BooksSlide lists={lists}/>
             </div>
             <div className="books_button">
                 <button className={`button red`}>смотреть все

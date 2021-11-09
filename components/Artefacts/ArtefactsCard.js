@@ -1,12 +1,18 @@
 import React from 'react'
 
-export const ArtefactsCard = ({image, title, text, stylePage}) => {
+export const ArtefactsCard = ({image, title, text, stylePage, lists}) => {
     return (
-        <div className={`artefacts_artefactsCard artefacts_artefactsCard-${stylePage}`}>
-            <img src={image} />
-            <h3>{title}</h3>
-            <p>{text}
-            </p>
-        </div>
+        <>
+        {
+            lists.map((item, index) => (
+                <div key={item + index} className={`artefacts_artefactsCard artefacts_artefactsCard-${stylePage}`}>
+                    <img src={item.image} />
+                    <h3>{item.title}</h3>
+                    <p>{item.text}
+                    </p>
+                </div>
+            ))
+        }
+        </>
     )
 }

@@ -3,6 +3,32 @@ import Link from 'next/link';
 import styles from '../styles/footer.module.scss';
 
 const HeaderMenu = ({active, setActive}) => {
+    const menu = [
+        {
+           text: "Статьи",
+           page: "articles"
+        },
+        {
+           text: "Фольклор",
+           page: "folklor"
+        },
+        {
+           text: "Артефакты",
+           page: "artefacts"
+        },
+        {
+           text: "Галерея",
+           page: "gallery"
+        },
+        {
+           text: "Литература",
+           page: "literature"
+        },
+        {
+           text: "Документы",
+           page: "documents"
+        },
+     ];
     return (
         <div className={active ? "header_menu active" : "header_menu"}>
             <img src="./img/close.svg" alt="close" onClick={() => setActive(false)}/>
@@ -12,36 +38,15 @@ const HeaderMenu = ({active, setActive}) => {
                         <a>Главная</a>
                      </Link>
                   </li>
-                  <li>
-                     <Link href='/articles'>
-                        <a>Статьи</a>
-                     </Link>
-                  </li>
-                  <li>
-                     <Link href='/folklor'>
-                        <a>Фольклор</a>
-                     </Link>
-                  </li>
-                  <li>
-                     <Link href='/artefacts'>
-                        <a>Артефакты</a>
-                     </Link>
-                  </li>
-                  <li>
-                     <Link href='/gallery'>
-                        <a>Галерея</a>
-                     </Link>
-                  </li>
-                  <li>
-                     <Link href='/literature'>
-                        <a>Литература</a>
-                     </Link>
-                  </li>
-                  <li>
-                     <Link href='/documents'>
-                        <a>Документы</a>
-                     </Link>
-                  </li>
+                  {
+                     menu.map((item) => (
+                        <li key={item}>
+                           <Link href={`/${item.page}`}>
+                              <a>{item.text}</a>
+                           </Link>
+                        </li>
+                     ))
+                  }
             </ul>
             <div className={styles.footer_line}></div>
             <div className={styles.footer_social}>

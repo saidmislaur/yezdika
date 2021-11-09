@@ -8,6 +8,7 @@ import '../styles/gallery.scss';
 import '../styles/books.scss';
 import '../src/fonts/stylesheet.scss';
 
+
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
 }

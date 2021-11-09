@@ -1,19 +1,12 @@
 import React from 'react'
 import GalleryCard from './GalleryCard'
 
-export const Gallery = () => {
+export const Gallery = ({lists}) => {
     return (
         <div className="gallery">
-            <h1 className="gallery_title">Галлеря</h1>
+            <h1 className="gallery_title">Галерея</h1>
             <div className="gallery_content">
-                <GalleryCard image='./img/folklor1.jpg' />
-                <GalleryCard image='./img/folklor2.jpg' />
-                <GalleryCard image='./img/folklor3.jpg' />
-                <GalleryCard image='./img/folklor1.jpg' />
-                <GalleryCard image='./img/folklor2.jpg' />
-                <GalleryCard image='./img/folklor3.jpg' />
-                <GalleryCard image='./img/folklor1.jpg' />
-                <GalleryCard image='./img/folklor1.jpg' />
+                <GalleryCard lists={lists} />
             </div>
             <div className="artefacts_button">
                 <button className={`button`}>смотреть все

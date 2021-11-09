@@ -1,9 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
-import { FolklorCard } from "./FolklorCard";
 
-
-export const Slide = () => {
+export const Slide = ({lists}) => {
   const settings = {
     className: "center",
     centerMode: true,
@@ -45,13 +43,16 @@ export const Slide = () => {
     return (
       <div>
         <Slider {...settings}>
-            <FolklorCard text="Сказания и мифы ингушей" image="./img/folklor1.jpg"/>
-            <FolklorCard text="Обрядовый фольклор" image="./img/folklor2.jpg"/>
-            <FolklorCard text="Ингушский нартский эпос" image="./img/folklor3.jpg"/>
-            <FolklorCard text="Сказания и мифы ингушей" image="./img/folklor1.jpg"/>
-            <FolklorCard text="Обрядовый фольклор" image="./img/folklor2.jpg"/>
-            <FolklorCard text="Сказания и мифы ингушей" image="./img/folklor3.jpg"/>
-            <FolklorCard text="Ингушский нартский эпос" image="./img/folklor2.jpg"/>
+          {
+              lists.map((item, index) => (
+                  <div key={item.id + index} className="slide_card">
+                      <img src={item.image} alt="img" />
+                      <div className="slide_span">
+                          <span>{item.text}</span>
+                      </div>
+                  </div>
+              ))
+          }
         </Slider>
       </div>
     );
