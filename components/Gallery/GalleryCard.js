@@ -1,6 +1,6 @@
 import React from 'react'
 
-const GalleryCard = ({image, pageStyle, text, lists}) => {
+const GalleryCard = ({pageStyle, text, lists}) => {
     return (
         <>
         {

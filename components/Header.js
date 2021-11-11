@@ -26,7 +26,7 @@ export default function Header() {
       },
       {
          text: "Литература",
-         page: "literature"
+         page: "books"
       },
       {
          text: "Документы",
@@ -37,7 +37,7 @@ export default function Header() {
       <div className='header'>
          <div className="header_logo">
             <Link href='/'>
-               <img src="./img/logo.png" alt="Logo"/>
+               <img src="/img/logo.png" alt="Logo"/>
             </Link>
          </div>
          <div className="header_nav">

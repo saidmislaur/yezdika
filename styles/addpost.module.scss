@@ -5,7 +5,7 @@
     &_content {
         margin: 0 auto;
         width: 800px;
-        padding: 100px;
+        padding: 40px 100px;
         border-radius: 20px;
         background-color: white;
 
@@ -35,8 +35,21 @@
             border: none;
             font-size: 20px;
             line-height: 1.3em;
-            overflow-y: hidden;
+            // overflow-y: hidden;
             resize: none;
+
+            &::-webkit-scrollbar {
+                width: 10px; /* ширина для вертикального скролла */
+                height: 3px; /* высота для горизонтального скролла */
+                background-color: #ffffff;
+            }
+            
+            /* ползунок скроллбара */
+            &::-webkit-scrollbar-thumb {
+                background-color: #757575;
+                border-radius: 3em;
+                box-shadow: inset 1px 1px 10px #f3faf7;
+            }
         }
         form {
             margin-top: 40px;

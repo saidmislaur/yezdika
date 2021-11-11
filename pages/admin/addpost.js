@@ -9,6 +9,26 @@ const AddPost = () => {
     const [titleValue, setTitleValue] = useState('');
     const [textValue, setTextValue] = useState('');
 
+    var months = ['January', 
+        'February', 
+        'March', 
+        'April', 
+        'May', 
+        'June', 
+        'July', 
+        'August', 
+        'September', 
+        'October', 
+        'November', 
+        'December'
+    ];
+    const time = new Date();
+    
+    let num = time.getDate()
+    
+    let month = months[time.getMonth()];
+    let year = time.getFullYear()
+
     useEffect(() => {
         async function fetchData() {
           const postsResponse = await axios.get('http://localhost:4000/posts');
@@ -19,10 +39,10 @@ const AddPost = () => {
 
     const el = 
         {
-            image: "./img/card1.jpg",
+            image: "/img/card1.jpg",
             title: titleValue,
             text: textValue,
-            published: '12 июня'
+            published: num + month + ',' + year
         }
 
     const onAddPost = () => {

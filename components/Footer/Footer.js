@@ -8,7 +8,7 @@ const Footer = () => {
             <div className={styles.footer_lineDesk}></div>
             <div className={styles.footer_content}>
             <div className={styles.footer_logo}>
-                <img src="./img/logo.png" alt="Logo"/>
+                <img src="/img/logo.png" alt="Logo"/>
             </div>
             <div className={styles.footer_nav}>
                 <nav>
@@ -58,22 +58,22 @@ const Footer = () => {
                 <ul>
                     <li>
                         <a hraf="#">
-                            <img src="./img/Twitter.svg" />
+                            <img src="/img/Twitter.svg" />
                         </a>
                     </li>
                     <li>
                         <a hraf="#">
-                            <img src="./img/Inst.svg" />
+                            <img src="/img/Inst.svg" />
                         </a>
                     </li>
                     <li>
                         <a hraf="#">
-                            <img src="./img/Youtube.svg" />
+                            <img src="/img/Youtube.svg" />
                         </a>
                     </li>  
                     <li> 
                         <a hraf="#">
-                            <img src="./img/Tumblr.svg" />
+                            <img src="/img/Tumblr.svg" />
                         </a>
                     </li>
                 </ul>
