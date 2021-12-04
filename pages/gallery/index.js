@@ -12,7 +12,7 @@ export default function Gallery()  {
 
     useEffect(() => {
         async function fetchData() {
-            const imagesRes = await axios.get(`http://localhost:4000/gallery`);
+            const imagesRes = await axios.get(`http://localhost:5050/gallery`);
             setImages(imagesRes.data)
         }
         fetchData();
@@ -28,8 +28,8 @@ export default function Gallery()  {
                 {
                     images.map((item, index) => (
                         <div key={item.id + index} className={`gallery_card gallery_card-heigth`}>
-                            <img src={item.image} alt="asd" />
-                            <p>{item.text}</p>
+                             <img src={`http://localhost:5050${item.pathImages}`} alt="Logo" />
+                            <p>{item.desc.length > 30 ? `${item.desc.substring(0, 200)}` : item.desc}</p>
                         </div>
                     ))
                 }

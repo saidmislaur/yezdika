@@ -6,7 +6,7 @@ const GalleryCard = ({pageStyle, text, lists}) => {
         {
             lists.map((item, index) => (
                 <div key={item.id + index} className={`gallery_card gallery_card-${pageStyle}`}>
-                    <img src={item.image} alt="asd" />
+                    <img src={`http://localhost:5050/${item.pathImages}`} alt="Logo" />
                     <p>{text}</p>
                 </div>
             ))

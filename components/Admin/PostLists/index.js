@@ -9,8 +9,8 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
-import styles from '../../styles/admin.module.scss'
-import AddButton from '../../components/Admin/Addbutton';
+import styles from '../admin.module.scss'
+import AddButton from '../Addbutton';
 
 const PostLists = ({posts, removePost}) => {
     return (
@@ -40,7 +40,7 @@ const PostLists = ({posts, removePost}) => {
                             <Button variant="contained" color="success">
                                 Изменить
                             </Button>
-                            <Button style={{border: 'none'}} variant="outlined" color="error" startIcon={<DeleteIcon onClick={() => removePost(post.id)} />} >
+                            <Button style={{border: 'none'}} variant="outlined" color="error" startIcon={<DeleteIcon onClick={() => removePost(post._id)} />} >
                             </Button> 
                             </TableCell>
                         </TableRow>

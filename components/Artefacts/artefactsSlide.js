@@ -55,9 +55,9 @@ export const ArtefactsSlide = ({lists, stylePage}) => {
         {
             lists.map((item, index) => (
                 <div key={item.id + index} className={`artefacts_artefactsCard artefacts_artefactsCard-${stylePage}`}>
-                    <img src={item.image} />
+                    <img src={`http://localhost:5050${item.pathImages}`} />
                     <h3>{item.title}</h3>
-                    <p>{item.text}
+                    <p>{item.text} 
                     </p>
                 </div>
             ))

@@ -12,11 +12,13 @@ export default function Articles() {
 
     useEffect(() => {
         async function fetchData() {
-            const postsResponse = await axios.get('http://localhost:4000/posts');
+            const postsResponse = await axios.get('http://localhost:5000/posts');
             setPosts(postsResponse.data);
         }
         fetchData()
     }, [])
+
+    console.log(posts);
 
     return (
         <div className="articlesPage">
@@ -26,10 +28,10 @@ export default function Articles() {
                 <div className="container">
                     <div className="articles_card">
                         {posts.map((item) => (
-                            <Link key={item.id} href={`articles/${item.id}`}>
+                            <Link key={item._id} href={`posts/${item._id}`}>
                                 <a>
                                     <div className="card" >
-                                        <img src={item.image} alt="Logo" />
+                                        <img src={`http://localhost:5050${item.pathImages}`} alt="Logo" />
                                         <div className="card_text">
                                             <h2>{item.title}</h2>
                                             <p>

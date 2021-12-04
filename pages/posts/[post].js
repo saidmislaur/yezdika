@@ -14,7 +14,7 @@ export default function Post(){
     
     useEffect(() => {
         async function fetchData() {
-            const postsResponse = await axios.get(`http://localhost:4000/posts/${id}`);
+            const postsResponse = await axios.get(`http://localhost:5050/posts/${id}`);
             setPost(postsResponse.data);
         }
         fetchData()
@@ -83,7 +83,7 @@ export default function Post(){
                 </div>
                 <div className={styles.posts_post}>
                     <div className={styles.posts_post__img}>
-                        <img src={post.image} alt/>
+                        <img src={`http://localhost:5050${post.pathImages}`} alt/>
                     </div>
                     <div className={styles.posts_post__title}>
                         <h1>{post.title}</h1>
@@ -97,10 +97,10 @@ export default function Post(){
                 </div>
                 </div>
             </div>
-            <div className="buttonPag">
+            {/* <div className="buttonPag">
                 <Button text='предыдущая страница' classes='prev'/>
                 <Button text='следующая страница' classes='next'/>
-            </div>
+            </div> */}
             <Footer />
         </div>
     )

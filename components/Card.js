@@ -8,7 +8,7 @@ export const Card = ({posts}) => {
         <>
             {posts.map((item) => (
                 <div key={item.id} className="card" onClick={() => test(item.id)}>
-                    <img src={item.image} alt="Logo" />
+                   <img src={`http://localhost:5050${item.pathImages}`} alt="Logo" />
                     <div className="card_text">
                         <h2>{item.title}</h2>
                         <p>

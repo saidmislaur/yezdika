@@ -1,7 +1,7 @@
 import React from 'react'
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import SettingsIcon from '@mui/icons-material/Settings';
-import styles from '../../styles/admin.module.scss'
+import styles from './admin.module.scss'
 const Topbar = () => {
     return (
         <div className={styles.topbar}>

@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../../styles/admin.module.scss'
+import styles from './admin.module.scss'
 import Link from 'next/link'
 
 const menu = [
@@ -17,7 +17,7 @@ const menu = [
     },
     {
        text: "Галерея",
-       link: "galery"
+       link: "gallery"
     },
     {
        text: "Литература",

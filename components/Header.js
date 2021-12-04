@@ -10,7 +10,7 @@ export default function Header() {
    const menu = [
       {
          text: "Статьи",
-         page: "articles"
+         page: "posts"
       },
       {
          text: "Фольклор",

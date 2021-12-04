@@ -6,7 +6,7 @@ export const Artefacts = ({lists}) => {
     return (
         <div className="artefacts">
             <h1 className="artefacts_title">Артефакты</h1>
-            <ArtefactsSlide lists={lists}/>
+                <ArtefactsSlide lists={lists}/>
             <div className="artefacts_button">
             <Link href='/artefacts'>
                 <button className={`button red`}>смотреть все

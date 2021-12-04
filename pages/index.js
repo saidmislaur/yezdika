@@ -19,10 +19,10 @@ export default function Home() {
 
   useEffect(() => {
     async function fetchData() {
-      const postsResponse = await axios.get('http://localhost:4000/posts');
+      const postsResponse = await axios.get('http://localhost:5050/posts');
       const folklorResponse = await axios.get('http://localhost:4000/folklor');
-      const artefactResponse = await axios.get('http://localhost:4000/artefacts');
-      const galleryResponse = await axios.get('http://localhost:4000/gallery');
+      const artefactResponse = await axios.get('http://localhost:5050/artefacts');
+      const galleryResponse = await axios.get('http://localhost:5050/gallery');
       const booksResponse = await axios.get('http://localhost:4000/books');
 
       setPosts(postsResponse.data);
@@ -69,9 +69,9 @@ export default function Home() {
         <Gallery lists={galleryList}/>
         <Books lists={booksList}/>
         <Footer />
-      </div> 
+      </div>
     </div>
     </>
-    
+
   )
 }
