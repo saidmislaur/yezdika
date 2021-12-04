@@ -29,11 +29,6 @@ const GalleryList = ({data}) => {
         }
       };
 
-    //   const el = {
-    //     pathImages: image,
-    //     desc: descValue
-    // }
-
     const addImage = (img = null) => {
       try {
           const formData = new FormData();
@@ -54,13 +49,11 @@ const GalleryList = ({data}) => {
 
     const uploadImage = async (e) => {
         const files = e.target.files;
-        
-        const formData = new FormData();
-        formData.append('file', files[0])
-        formData.append("file", selectedFile);
-        
-        addImage(files[0])
-        console.log(files[0]);
+        setSelectedFile(files[0])
+    }
+
+    const handleClick = () => {
+        addImage(selectedFile)
     }
 
     return (
@@ -75,7 +68,7 @@ const GalleryList = ({data}) => {
                 <Card style={{display: 'inline-block', marginLeft: '20px', marginTop: '20px'}} key={item.id} sx={{ maxWidth: 345 }}>
                     <CardMedia
                         component="img"
-                        height="80%"
+                        height="300px"
                         image={`http://localhost:5050/${item.pathImages}`}
                         alt="green iguana"
                         />
@@ -100,7 +93,7 @@ const GalleryList = ({data}) => {
                     setToogleForm={setToogleForm} 
                     descValue={descValue}
                     imageValue={image}
-                    onAdd={addImage}
+                    onAdd={handleClick}
                     onChangeText={(e) => setDescValue(e.target.value)}
                     onChangeImage={uploadImage}
                 />

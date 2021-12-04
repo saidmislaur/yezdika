@@ -18,7 +18,8 @@ const FolklorsList = ({data}) => {
     const [folklor, setFolklor] = useState([])
     const [titleValue, setTitleValue] = useState('');
     const [textValue, setTextValue] = useState('');
-
+    const [image, setImage] = useState(null);
+    const [selectedFile, setSelectedFile] = useState(null);
     const [toogleForm, setToogleForm] = useState(false);
     const onRemove = (id) => {
         try {
@@ -29,17 +30,16 @@ const FolklorsList = ({data}) => {
         }
       };
 
-    const el = {
-        title: titleValue,
-        text: textValue
-    }
 
-    const addFolklor = () => {
+    const addFolklor = (img = null) => {
       try {
-          console.log(el)
+        const formData = new FormData();
+        formData.append('image', img);
+        formData.append('title', titleValue);
+        formData.append('text', textValue)
           const { data } = axios.post(
               `http://localhost:5050/folklor`,
-              el,
+              formData,
           );
           setFolklor([...folklor, data])
           setTextValue('');
@@ -48,6 +48,15 @@ const FolklorsList = ({data}) => {
       } catch (error) {
         alert(error);
       }
+    }
+
+    const uploadImage = async (e) => {
+        const files = e.target.files;
+        setSelectedFile(files[0])
+    }
+
+    const handleClick = () => {
+        addFolklor(selectedFile)
     }
 
     return (
@@ -62,8 +71,8 @@ const FolklorsList = ({data}) => {
                 <Card style={{display: 'inline-block', marginLeft: '20px', marginTop: '20px'}} key={item.id} sx={{ maxWidth: 345 }}>
                     <CardMedia
                         component="img"
-                        height="150"
-                        image={`http://localhost:5050${item.pathImages}`}
+                        height="300"
+                        image={`http://localhost:5050/${item.pathImages}`}
                         alt="green iguana"
                         />
                         <CardContent>
@@ -78,7 +87,7 @@ const FolklorsList = ({data}) => {
                         <Button variant="outlined" startIcon={<EditIcon />}>
                             Изменить
                         </Button>
-                        <Button onClick={(id) => onRemove(item.id)} variant="outlined" color="error" startIcon={<DeleteIcon />} >
+                        <Button onClick={() => onRemove(item._id)} variant="outlined" color="error" startIcon={<DeleteIcon />} >
                             Удалить
                         </Button>
                     </CardActions>
@@ -89,9 +98,12 @@ const FolklorsList = ({data}) => {
                 setToogleForm={setToogleForm} 
                 value={titleValue}
                 textValue={textValue}
-                onAdd={addFolklor}
+                imageValue={image}
+                onAdd={handleClick}
                 onChange={(e) => setTitleValue(e.target.value)}
-                onChangeText={(e) => setTextValue(e.target.value)}/>}
+                onChangeText={(e) => setTextValue(e.target.value)}
+                onChangeImage={uploadImage}/>}
+
         </div>
     )
 }

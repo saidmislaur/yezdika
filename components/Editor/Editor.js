@@ -13,7 +13,7 @@ const Editor = () => {
             // const Marker = require("@editorjs/marker");
             // const Delimiter = require("@editorjs/delimiter");
             const Header = require("@editorjs/header");
-            // const Quote = require("@editorjs/quote");
+            const Quote = require("@editorjs/quote");
             // const SimpleImage = require("@editorjs/simple-image");
             const ImageTool = require("@editorjs/image");
             // const AttachesTool = require("@editorjs/attaches");
@@ -30,7 +30,8 @@ const Editor = () => {
               onChange: () => {},
               tools: {
                 Header,
-                ImageTool
+                ImageTool,
+                Quote
               },
             });
           })();

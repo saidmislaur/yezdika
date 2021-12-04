@@ -3,11 +3,19 @@ import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import styles from './modal.module.scss';
 
-export const Modal = ({setToogleForm, value, onChange, onAdd, textValue, onChangeText}) => {
+export const Modal = ({setToogleForm, value, onChange, onAdd, textValue, onChangeText, onChangeImage, imageValue}) => {
     return (
         <div className={styles.modal} onClick={() => setToogleForm(false)}>
             <div className={styles.modal_content} onClick={e => e.stopPropagation()}>
                 <form action="">
+                    <div>
+                        <input 
+                            type="file" 
+                            name="file"
+                            placeholder="добавить картинку"
+                            value={imageValue} 
+                            onChange={onChangeImage} />
+                    </div>
                     <div>
                         <h1>test</h1>
                         <input 

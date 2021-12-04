@@ -31,7 +31,7 @@ export default function Articles() {
                             <Link key={item._id} href={`posts/${item._id}`}>
                                 <a>
                                     <div className="card" >
-                                        <img src={`http://localhost:5050${item.pathImages}`} alt="Logo" />
+                                        <img src={`http://localhost:5050/${item.pathImages}`} alt="Logo" />
                                         <div className="card_text">
                                             <h2>{item.title}</h2>
                                             <p>

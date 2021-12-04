@@ -15,21 +15,23 @@ export default function Home() {
   const [folklorList, setFolklorList] = useState([]);
   const [artefactList, setArtefactList] = useState([]);
   const [galleryList, setGalleryList] = useState([]);
-  const [booksList, setBooksList] = useState([]);
+  // const [booksList, setBooksList] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
-      const postsResponse = await axios.get('http://localhost:5050/posts');
-      const folklorResponse = await axios.get('http://localhost:4000/folklor');
+      const postsResponse = await axios.get('https://yezdik.herokuapp.com/posts');
+      const folklorResponse = await axios.get('http://localhost:5050/folklor');
       const artefactResponse = await axios.get('http://localhost:5050/artefacts');
       const galleryResponse = await axios.get('http://localhost:5050/gallery');
-      const booksResponse = await axios.get('http://localhost:4000/books');
+      // const booksResponse = await axios.get('http://localhost:4000/books');
 
       setPosts(postsResponse.data);
       setFolklorList(folklorResponse.data);
       setArtefactList(artefactResponse.data);
       setGalleryList(galleryResponse.data);
-      setBooksList(booksResponse.data);
+      // setBooksList(booksResponse.data);
+
+      console.log(postsResponse)
     }
     fetchData();
   }, []);
@@ -67,7 +69,7 @@ export default function Home() {
         <Folklore lists={folklorList}/>
         <Artefacts lists={artefactList}/>
         <Gallery lists={galleryList}/>
-        <Books lists={booksList}/>
+        {/* <Books lists={booksList}/> */}
         <Footer />
       </div>
     </div>

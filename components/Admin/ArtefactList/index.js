@@ -18,6 +18,8 @@ const ArtefactsList = ({data}) => {
     const [artefact, setArtefact] = useState([])
     const [titleValue, setTitleValue] = useState('');
     const [textValue, setTextValue] = useState('');
+    const [image, setImage] = useState(null);
+    const [selectedFile, setSelectedFile] = useState(null);
 
     useEffect(() => {
         async function fetchData() {
@@ -25,8 +27,7 @@ const ArtefactsList = ({data}) => {
           setArtefact(artefactResponse.data);
         }
         fetchData();
-      }, [artefact]);
-
+    }, [artefact]);
     const onRemove = (id) => {
         try {
           axios.delete(`http://localhost:5050/artefacts/${id}`);
@@ -36,26 +37,33 @@ const ArtefactsList = ({data}) => {
         }
       };
 
-      const el = {
-          title: titleValue,
-          text: textValue
-      }
-
-      const addArtefact = () => {
+      const addArtefact = (img = null) => {
         try {
-            console.log(el)
+            const formData = new FormData();
+            formData.append('image', img);
+            formData.append('title', titleValue);
+            formData.append('text', textValue)
             const { data } = axios.post(
                 `http://localhost:5050/artefacts`,
-                el,
+                formData,
             );
             setArtefact([...artefact, data])
             setTextValue('');
             setTitleValue('');
-            alert('добавлено')
         } catch (error) {
           alert(error);
         }
       }
+
+    const uploadImage = async (e) => {
+        const files = e.target.files;
+        setSelectedFile(files[0])
+    }
+
+    const handleClick = () => {
+        addArtefact(selectedFile)
+    }
+
 
     return (
         <div className={styles.topbar_folklorList}>
@@ -70,7 +78,7 @@ const ArtefactsList = ({data}) => {
                     <CardMedia
                         component="img"
                         height="195px"
-                        image={`http://localhost:5050${item.pathImages}`}
+                        image={`http://localhost:5050/${item.pathImages}`}
                         alt="green iguana"
                         />
                         <CardContent>
@@ -97,9 +105,11 @@ const ArtefactsList = ({data}) => {
             setToogleForm={setToogleForm} 
             value={titleValue}
             textValue={textValue}
-            onAdd={addArtefact}
+            imageValue={image}
+            onChangeImage={uploadImage}
             onChange={(e) => setTitleValue(e.target.value)}
             onChangeText={(e) => setTextValue(e.target.value)}
+            onAdd={handleClick}
             />}
         </div>
     )

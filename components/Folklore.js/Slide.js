@@ -46,9 +46,9 @@ export const Slide = ({lists}) => {
           {
               lists.map((item, index) => (
                   <div key={item.id + index} className="slide_card">
-                      <img src={item.image} alt="img" />
+                      <img src={`http://localhost:5050/${item.pathImages}`} alt="img" />
                       <div className="slide_span">
-                          <span>{item.text}</span>
+                          <span>{item.text.length > 15 ? `${item.text.substring(0, 25)}` : item.text}</span>
                       </div>
                   </div>
               ))
