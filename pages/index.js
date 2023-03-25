@@ -11,32 +11,104 @@ import Header from "../components/Header"
 
 
 export default function Home() {
-  const [posts, setPosts] = useState([]);
-  const [folklorList, setFolklorList] = useState([]);
-  const [artefactList, setArtefactList] = useState([]);
-  const [galleryList, setGalleryList] = useState([]);
-  // const [booksList, setBooksList] = useState([]);
+  const [posts, setPosts] = useState([
+    {
+      pathImages: 'card1.jpg',
+      title: 'жизнь после...',
+      text: 'После смерти жены Тони несколько раз хочет покончить жизнь самоубийством, но каждый раз его останавливает мысль о том, что некому будет позаботиться о его собаке. В итоге мужчина принимает решение жить дальше: делать всё, что хочется, не думая о последствиях. Теперь он больше не хороший парень, каким был когда-то, поэтому друзья и близкие пытаются его вернуть.'
+    },
+    {
+      pathImages: 'card2.jpg',
+      title: 'История цивилизации',
+      text: 'А что как вовсе нет времён И мир — действительный как будто — Не в самом деле сотворён, А просто кажется кому-то?Возможно, мнится Новый год. И снег в чуднóм круженье этом Не явно, может быть, идёт, А лишь воображаем кем-то. И чувства в призрачной груди Несуществующе теснятся,   Все лица, связи и пути  Пригрезились кому-то, снятся.'
+    },
+    {
+      pathImages: 'BeatlesMainW.jpg',
+      title: 'The Beatles',
+      text: 'The Beatles — британская рок-группа из Ливерпуля, основанная в 1960 году, в составе которой играли Джон Леннон, Пол Маккартни, Джордж Харрисон и Ринго Старр. Также в разное время в составе группы выступали Стюарт Сатклифф, Пит Бест и Джимми Никол'
+    },
+  ]);
+  const [folklorList, setFolklorList] = useState([
+    {
+      pathImages: 'folklor1.jpg',
+      text: 'История народов'
+    },
+    {
+      pathImages: 'folklor2.jpg',
+      text: 'История народов'
+    },
+    {
+      pathImages: 'folklor3.jpg',
+      text: 'История народов'
+    },
+    {
+      pathImages: 'folklor1.jpg',
+      text: 'История народов'
+    },
+    {
+      pathImages: 'folklor2.jpg',
+      text: 'История народов'
+    },
+    {
+      pathImages: 'folklor2.jpg',
+      text: 'История народов'
+    },
+  ]);
+  const [artefactList, setArtefactList] = useState([
+    {
+      pathImages: 'Ellipse17.jpg',
+      title: 'Металлическая ваза «буккеро» Предположительно VII в. до н. э.',
+      text: 'Размер: Общ.вые,- 30,5 см., выс. сосуда-24,5 см.. Д. тулова-14,5 см, Д.шейки ножки-8; 1см. Д.дна-11,4 см'
+    },
+    {
+      pathImages: 'Ellipse18.jpg',
+      title: 'Металлическая ваза «буккеро» Предположительно VII в. до н. э.',
+      text: 'Размер: Общ.вые,- 30,5 см., выс. сосуда-24,5 см.. Д. тулова-14,5 см, Д.шейки ножки-8; 1см. Д.дна-11,4 см'
+    },
+    {
+      pathImages: 'Ellipse19.jpg',
+      title: 'Металлическая ваза «буккеро» Предположительно VII в. до н. э.',
+      text: 'Размер: Общ.вые,- 30,5 см., выс. сосуда-24,5 см.. Д. тулова-14,5 см, Д.шейки ножки-8; 1см. Д.дна-11,4 см'
+    },
+    {
+      pathImages: 'Ellipse17.jpg',
+      title: 'Металлическая ваза «буккеро» Предположительно VII в. до н. э.',
+      text: 'Размер: Общ.вые,- 30,5 см., выс. сосуда-24,5 см.. Д. тулова-14,5 см, Д.шейки ножки-8; 1см. Д.дна-11,4 см'
+    },
+    {
+      pathImages: 'Ellipse18.jpg',
+      title: 'Металлическая ваза «буккеро» Предположительно VII в. до н. э.',
+      text: 'Размер: Общ.вые,- 30,5 см., выс. сосуда-24,5 см.. Д. тулова-14,5 см, Д.шейки ножки-8; 1см. Д.дна-11,4 см'
+    },
+  ]);
+  const [galleryList, setGalleryList] = useState([
+    {
+      pathImages: 'Folklor1.jpg'
+    },
+    {
+      pathImages: 'Folklor2.jpg'
+    },
+    {
+      pathImages: 'Folklor3.jpg'
+    },
+    {
+      pathImages: 'Folklor1.jpg'
+    },
+    {
+      pathImages: 'Folklor2.jpg'
+    },
+    {
+      pathImages: 'Folklor3.jpg'
+    },
+    {
+      pathImages: 'Folklor1.jpg'
+    },
+    {
+      pathImages: 'Folklor2.jpg'
+    },
+  ]);
+  const [booksList, setBooksList] = useState([]);
 
-  useEffect(() => {
-    async function fetchData() {
-      const postsResponse = await axios.get('https://yezdik.herokuapp.com/posts');
-      const folklorResponse = await axios.get('http://localhost:5050/folklor');
-      const artefactResponse = await axios.get('http://localhost:5050/artefacts');
-      const galleryResponse = await axios.get('http://localhost:5050/gallery');
-      // const booksResponse = await axios.get('http://localhost:4000/books');
-
-      setPosts(postsResponse.data);
-      setFolklorList(folklorResponse.data);
-      setArtefactList(artefactResponse.data);
-      setGalleryList(galleryResponse.data);
-      // setBooksList(booksResponse.data);
-
-      console.log(postsResponse)
-    }
-    fetchData();
-  }, []);
-
-  console.log(posts)
 
   return (
     <>

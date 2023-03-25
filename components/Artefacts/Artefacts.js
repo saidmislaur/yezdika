@@ -8,11 +8,11 @@ export const Artefacts = ({lists}) => {
             <h1 className="artefacts_title">Артефакты</h1>
                 <ArtefactsSlide lists={lists}/>
             <div className="artefacts_button">
-            <Link href='/artefacts'>
+            {/* <Link href='/artefacts'>
                 <button className={`button red`}>смотреть все
                     <img src="./img/arrow.svg" alt="arr"/>
                 </button>
-            </Link>
+            </Link> */}
             </div>
         </div>
     )

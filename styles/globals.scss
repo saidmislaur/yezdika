@@ -162,6 +162,7 @@ a {
 
     img {
       width: 100%;
+      height: 100%;
     }
   }
   &_title {
@@ -205,17 +206,6 @@ a {
     }
   }
 }
-// @media (max-width: 800px) {
-//   .articles {
-//     &_title {
-//       margin-top:30px;
-//       font-size: 22px;
-//     }
-//     &_card {
-//       margin-top: 25px;
-//     }
-//   }
-// }
 
 
 

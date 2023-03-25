@@ -97,10 +97,6 @@ export default function Post(){
                 </div>
                 </div>
             </div>
-            {/* <div className="buttonPag">
-                <Button text='предыдущая страница' classes='prev'/>
-                <Button text='следующая страница' classes='next'/>
-            </div> */}
             <Footer />
         </div>
     )

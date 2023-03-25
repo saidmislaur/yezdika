@@ -55,7 +55,7 @@ export const ArtefactsSlide = ({lists, stylePage}) => {
         {
             lists.map((item, index) => (
                 <div key={item.id + index} className={`artefacts_artefactsCard artefacts_artefactsCard-${stylePage}`}>
-                    <img src={`http://localhost:5050/${item.pathImages}`} />
+                    <img src={`/img/${item.pathImages}`} />
                     <h3>{item.title.length > 70 ? `${item.title.substring(0, 200)}` : item.title}</h3>
                     <p>{item.text.length > 50 ? `${item.text.substring(0, 200)}...` : item.text} 
                     </p>

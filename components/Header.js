@@ -37,7 +37,7 @@ export default function Header() {
       <div className='header'>
          <div className="header_logo">
             <Link href='/'>
-               <img src="/img/logo.png" alt="Logo"/>
+               <h1>SAIDMISLAUR</h1>
             </Link>
          </div>
          <div className="header_nav">
@@ -51,7 +51,7 @@ export default function Header() {
                   {
                      menu.map((item) => (
                         <li key={item}>
-                           <Link href={`/${item.page}`}>
+                           <Link href={'#'}>
                               <a>{item.text}</a>
                            </Link>
                         </li>
